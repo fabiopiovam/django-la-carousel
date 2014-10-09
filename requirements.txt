@@ -1,0 +1,4 @@
+Django>=1.4.10
+django-admin-sortable==1.7.3
+easy-thumbnails==2.0.1
+Pillow==2.5.3

@@ -1,0 +1,29 @@
+{% if carousel %}
+<div id="carousel-{{carousel.type}}" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		{% for i in range_carousel %}
+		<li data-target="#carousel-{{carousel.type}}" data-slide-to="{{ i }}" class="{% if forloop.first %} active {% endif %}"></li>
+		{% endfor %}
+	</ol>
+	<div class="carousel-inner">
+		
+		{% for photo in carousel.images_set %}
+		<div class="item {% if forloop.first %} active {% endif %}">
+			<img src="{{ MEDIA_URL }}{{ photo.image }}" alt="{{ photo.title }}">
+			<div class="container">
+				<a href="{{ photo.link|default:"#" }}">
+					<div class="carousel-caption carousel-custom">
+						<h3>{{ photo.title }}</h3>
+						<p>
+							{{ photo.description }}
+						</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<a class="left carousel-control" href="#carousel-{{carousel.type}}" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="right carousel-control" href="#carousel-{{carousel.type}}" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+{% endif %}
