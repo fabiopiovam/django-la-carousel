@@ -1,4 +1,6 @@
 {% if carousel %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'carousel/css/carousel.css' %}">
 <div id="carousel-{{carousel.type}}" class="carousel slide" data-ride="carousel">
 	<ol class="carousel-indicators">
 		{% for i in range_carousel %}
