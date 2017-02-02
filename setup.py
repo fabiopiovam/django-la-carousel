@@ -15,7 +15,7 @@ except:
 
 setup(
     name='django-la-carousel',
-    version="v0.1.0",
+    version="v0.2.1",
     description=(
         'Django app for a simple carousel management'
     ),
