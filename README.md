@@ -13,7 +13,7 @@ Django app for a simple responsive carousel management
 
 - Access your django admin and visit the carousel app;
 
-- Call the templatetags into your template, call js, css and generate carousel. Ex.:
+- Call the templatetags, js, css into your template and generate carousel. Ex.:
     ``` html
     {% load carousel_tags %}
     
