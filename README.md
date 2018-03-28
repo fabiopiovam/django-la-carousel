@@ -1,5 +1,4 @@
-django-la-carousel
-==================
+# django-la-carousel
 
 Django app for a simple responsive carousel management
 
@@ -9,7 +8,7 @@ Django app for a simple responsive carousel management
 
 - Add carousel into `INSTALLED_APPS`;
 
-- Execute `python manage.py syncdb`;
+- Execute `python manage.py migrate`;
 
 - Access your django admin and visit the carousel app;
 

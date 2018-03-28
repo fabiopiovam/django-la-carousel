@@ -17,4 +17,4 @@ def generate_carousel(context, carousel=''):
         obj = None
         range_carousel = []
     
-    return {'carousel': obj, 'range_carousel': range_carousel, 'MEDIA_URL': context['MEDIA_URL']}
+    return {'carousel': obj, 'range_carousel': range_carousel}

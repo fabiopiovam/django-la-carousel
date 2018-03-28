@@ -1,4 +1,4 @@
-Django<=1.6
-easy-thumbnails==2.0.1
-django-admin-sortable==1.7.3
-Pillow==4.0.0
+Django
+easy-thumbnails
+django-admin-sortable
+Pillow
