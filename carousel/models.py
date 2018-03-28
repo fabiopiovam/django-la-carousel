@@ -55,7 +55,7 @@ class Photo(SortableMixin):
     def __str__(self):
         return u'%s' % self.image
 
-    carousel = SortableForeignKey('Carousel')
+    carousel = SortableForeignKey('Carousel', on_delete=models.CASCADE)
     image = ThumbnailerImageField(u'Imagem', blank=False, null=False,
                                   upload_to=get_upload_to_image,
                                   resize_source=dict(size=(1280, 377),
@@ -91,7 +91,7 @@ class Carousel(SortableMixin):
         if os.path.exists(dir):
             shutil.rmtree(dir)
 
-    owner = models.ForeignKey(User, verbose_name=u"Usuário")
+    owner = models.ForeignKey(User, verbose_name=u"Usuário", on_delete=models.CASCADE)
 
     type = models.CharField(u'Carousel', max_length=50,
                             choices=carousel_choices)
